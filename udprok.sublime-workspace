@@ -1,0 +1,1314 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"console"
+			],
+			[
+				"elem",
+				"element"
+			],
+			[
+				"tag",
+				"tagName"
+			],
+			[
+				"da",
+				"data_string"
+			],
+			[
+				"bu",
+				"buf"
+			],
+			[
+				"u_",
+				"u_char"
+			],
+			[
+				"u",
+				"u_int16_t"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"cr",
+				"crc32"
+			],
+			[
+				"siz",
+				"size_t"
+			],
+			[
+				"tcp",
+				"tcp_header_len"
+			],
+			[
+				"b",
+				"buff"
+			],
+			[
+				"sq",
+				"seq_num"
+			],
+			[
+				"des",
+				"destIP"
+			],
+			[
+				"ip_",
+				"ip_header_len"
+			],
+			[
+				"ip",
+				"ip_header_len"
+			],
+			[
+				"sr",
+				"srcIP"
+			],
+			[
+				"dest",
+				"destMac"
+			],
+			[
+				"su",
+				"sourceIP"
+			],
+			[
+				"u_in",
+				"u_int32_t"
+			],
+			[
+				"tc",
+				"tcp_data"
+			],
+			[
+				"sourc",
+				"sourceIP"
+			],
+			[
+				"pkt",
+				"pkt_data"
+			],
+			[
+				"de",
+				"device"
+			],
+			[
+				"au",
+				"autoCenter"
+			],
+			[
+				"zone",
+				"zoneid"
+			],
+			[
+				"zon",
+				"zoneid"
+			],
+			[
+				"has",
+				"hasAccess"
+			],
+			[
+				"map",
+				"maplist"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"getZ",
+				"getZoneAccess\t(BaseController.class.php)"
+			],
+			[
+				"acc",
+				"access"
+			],
+			[
+				"group",
+				"group_id"
+			],
+			[
+				"select",
+				"selection\t(map.html)"
+			],
+			[
+				"grou",
+				"group_id"
+			],
+			[
+				"hidden",
+				"hiddenForm"
+			],
+			[
+				"see",
+				"selection"
+			],
+			[
+				"tr",
+				"true\t(ZoneModel.class.php)"
+			],
+			[
+				"cl",
+				"clearLevel"
+			],
+			[
+				"mapi",
+				"mapid"
+			],
+			[
+				"buil",
+				"buildinglistNode"
+			],
+			[
+				"include",
+				"includedACL"
+			],
+			[
+				"buildinglis",
+				"buildinglistNode"
+			],
+			[
+				"mark",
+				"marketlistNode"
+			],
+			[
+				"serverli",
+				"serverlistNode"
+			],
+			[
+				"acce",
+				"accesses"
+			],
+			[
+				"mar",
+				"marketlistNode"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"server",
+				"serverlistNode"
+			],
+			[
+				"sele",
+				"selection"
+			],
+			[
+				"_zon",
+				"_zonelist"
+			],
+			[
+				"serv",
+				"serverlist"
+			],
+			[
+				"_se",
+				"_selection"
+			],
+			[
+				"sel",
+				"selection"
+			],
+			[
+				"str",
+				"strs"
+			],
+			[
+				"_m",
+				"_map"
+			],
+			[
+				"bui",
+				"building\t(GroupController.class.php)"
+			],
+			[
+				"z",
+				"zonelist"
+			],
+			[
+				"zn",
+				"zone"
+			],
+			[
+				"zoneli",
+				"zonelist"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"zno",
+				"zoneList"
+			],
+			[
+				"ser",
+				"server"
+			],
+			[
+				"s",
+				"server"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"zo",
+				"zone"
+			],
+			[
+				"serer",
+				"serverList"
+			],
+			[
+				"pic",
+				"picName"
+			],
+			[
+				"icon",
+				"iconname"
+			],
+			[
+				"ima",
+				"imageinfo"
+			],
+			[
+				"incu",
+				"include_once\t(logincheck.php)"
+			],
+			[
+				"poin",
+				"points1"
+			],
+			[
+				"po",
+				"poly"
+			],
+			[
+				"pol",
+				"poly"
+			],
+			[
+				"getI",
+				"getGwInterface"
+			],
+			[
+				"get",
+				"getSource"
+			],
+			[
+				"c",
+				"c_str"
+			],
+			[
+				"g",
+				"gwPort"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"geC",
+				"getCurrentDrawing"
+			],
+			[
+				"getC",
+				"getCurrentDrawing"
+			],
+			[
+				"next",
+				"getNextId"
+			],
+			[
+				"svg",
+				"svgedit"
+			],
+			[
+				"seg",
+				"segp"
+			],
+			[
+				"create",
+				"createCircle"
+			],
+			[
+				"onmou",
+				"onmouseout"
+			],
+			[
+				"on",
+				"onmouseover"
+			],
+			[
+				"ons",
+				"onseg"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"o",
+				"onmouseover"
+			],
+			[
+				"p_c",
+				"p_color"
+			],
+			[
+				"col",
+				"colors"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"H",
+				"H5Game"
+			],
+			[
+				"load",
+				"loadJQuery"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"auth",
+				"authResp"
+			],
+			[
+				"cli",
+				"clients"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"open",
+				"openId"
+			],
+			[
+				"gw",
+				"gwId"
+			],
+			[
+				"tim",
+				"time"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"must",
+				"must_get"
+			],
+			[
+				"use",
+				"useMac\t(config.cpp)"
+			],
+			[
+				"divi",
+				"divide\t(index3.html)"
+			],
+			[
+				"dat",
+				"data-gid"
+			],
+			[
+				"relo",
+				"reloadSvg"
+			],
+			[
+				"lay",
+				"layername"
+			],
+			[
+				"getLa",
+				"getLayernameByIdCb"
+			],
+			[
+				"getL",
+				"getLayernameByGidCb"
+			],
+			[
+				"getLayer",
+				"getLayernameById"
+			],
+			[
+				"getLay",
+				"getLayernameById"
+			],
+			[
+				"paren",
+				"parentNode"
+			],
+			[
+				"mapa",
+				"mapdata"
+			],
+			[
+				"text",
+				"text"
+			],
+			[
+				"getA",
+				"getAttributeNS"
+			],
+			[
+				"child",
+				"childNodes"
+			],
+			[
+				"spl",
+				"split"
+			],
+			[
+				"new",
+				"newElem"
+			],
+			[
+				"el",
+				"elem"
+			],
+			[
+				"e",
+				"elem1"
+			],
+			[
+				"wind",
+				"window"
+			],
+			[
+				"origin",
+				"originElems"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/c++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/c++.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "git",
+		"selected_items":
+		[
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"che",
+				"Git: Checkout"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"ad",
+				"Git: Quick Add"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"check",
+				"Git: Checkout"
+			],
+			[
+				"pu sh",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Quick Add"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"c",
+				"Git: Commit"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"a",
+				"Git: Quick Add"
+			],
+			[
+				"git push",
+				"Git: Push Current Branch"
+			],
+			[
+				"remo",
+				"Git: Add Remote"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Quick Add"
+			],
+			[
+				"git ini",
+				"Git: Init"
+			],
+			[
+				"statu",
+				"Git: Status"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"bran",
+				"Git: Checkout New Branch"
+			],
+			[
+				"pu",
+				"Git: Push"
+			],
+			[
+				"C",
+				"Git: Commit"
+			],
+			[
+				"ADD",
+				"Git: Quick Add"
+			],
+			[
+				"log",
+				"Git: Log"
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"COM",
+				"Git: Commit"
+			],
+			[
+				"pusg",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"pu s",
+				"Git: Push"
+			],
+			[
+				"commo",
+				"Git: Custom Command"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"cus",
+				"Git: Custom Command"
+			],
+			[
+				"quick",
+				"Git: Quick Add"
+			],
+			[
+				"qui",
+				"Git: Quick Add"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git dif",
+				"Git: Diff"
+			],
+			[
+				"git diff",
+				"Git: Diff"
+			],
+			[
+				"git appl",
+				"Git: Apply Stash"
+			],
+			[
+				"git sta",
+				"Git: Stash"
+			],
+			[
+				"sublime",
+				"SublimeGit: Documentation"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git rm",
+				"Git: Remote"
+			],
+			[
+				"git ",
+				"Git: Show"
+			],
+			[
+				"git di",
+				"Git: Diff"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/BinHunter/Desktop/golang/udprok"
+	],
+	"file_history":
+	[
+		"/Users/BinHunter/Desktop/端口映射列表",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/src/auth.cpp",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/static/editor/svgcanvas.js",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/static/editor/callback.js",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/static/api/mapapi.js",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/static/editor/extensions/ext-callback.js",
+		"/Users/BinHunter/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/9bb619a7c829ff1e64a14218519120a9/Message/MessageTemp/6a04cf9bbe20e4e33f4c3c112b8bada3/File/1111111",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/sftp-config.json",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Model/ApiModel.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/static/editor/svg-editor.js",
+		"/Users/BinHunter/Downloads/vd.php",
+		"/Users/BinHunter/Desktop/c/PowerBeta/src/main.cpp",
+		"/Users/BinHunter/Desktop/c/PowerBeta/CMakeLists.txt",
+		"/Users/BinHunter/Desktop/c/PowerBeta/sftp-config.json",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/static/editor/svgcanvas.js",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/static/editor/spinbtn/JQuerySpinBtn.js",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Controller/BaseController.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Controller/UserController.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Controller/IndexController.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Common/Controller/TopBaseController.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/View/Admin/map.html",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Controller/AdminController.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Model/AdminMapaccessModel.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/View/Group/map.html",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Model/GroupModel.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Model/AdminModel.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Model/ZoneModel.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Model/MapModel.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Model/BuildingModel.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Model/GroupMapaccessModel.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Controller/GroupController.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/View/Group/index.html",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/View/Admin/index.html",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/View/Group/edit.html",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/View/Group/add.html",
+		"/Users/BinHunter/Desktop/mapmanager.sql",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/Controller/MapController.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/static/editor/extensions/ext-icon.js",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Common/Lib/SVGTool.class.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Home/View/Map/edit.html",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Common/Conf/config.php",
+		"/Users/BinHunter/Desktop/web/新疆mapeditor/Application/Common/Model/MapModel.class.php",
+		"/Users/BinHunter/Desktop/web/license/include/function.php",
+		"/Users/BinHunter/Desktop/web/license/index.php",
+		"/Users/BinHunter/Desktop/web/license/ss/_admin.php",
+		"/Users/BinHunter/Downloads/0721.xls",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/static/editor/extensions/ext-divider.js",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/index.html",
+		"/Users/BinHunter/Desktop/test.sh",
+		"/Users/BinHunter/Desktop/HM-16.4+SCM-4.0/cfg/per-sequence/ChineseDocument_444.cfg",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/index2.html",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/index3.html",
+		"/Users/BinHunter/Desktop/_admin.php",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/sftp-config.json",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/src/gateway.cpp",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/sftp-config.json",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/src/config.cpp",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/include/auth.hpp",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/src/authserver.cpp",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/include/authserver.hpp",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/include/poweralpha.hpp",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/sampleconfig",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/include/gateway.hpp",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/sftp-config.json",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/index.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/wechat.php",
+		"/Users/BinHunter/Downloads/test.svg",
+		"/Users/BinHunter/Downloads/[zmk.tw]A.Dogs.Purpose.2017.720p.BluRay.x264.DTS-HDC/A.Dogs.Purpose.2017.720p.BluRay.x264.DTS-HDC.chs.srt",
+		"/Users/BinHunter/Desktop/installer/phpinstall.sh",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/static/api/更新内容.txt",
+		"/Users/BinHunter/Desktop/更新内容.txt",
+		"/Users/BinHunter/Desktop/切割算法及流程.txt",
+		"/Users/BinHunter/Desktop/开发流程.txt",
+		"/Users/BinHunter/Desktop/c/友好网安/src/getline.cpp",
+		"/Users/BinHunter/Downloads/SvgTool.php",
+		"/Users/BinHunter/Desktop/test.html",
+		"/Users/BinHunter/Desktop/web/h.xbug.io/public/js/api.js",
+		"/Users/BinHunter/Desktop/web/h.xbug.io/app/Http/Controllers/UserController.php",
+		"/Users/BinHunter/Desktop/web/h.xbug.io/routes/web.php",
+		"/Users/BinHunter/Desktop/web/h.xbug.io/resources/views/login.blade.php",
+		"/Users/BinHunter/Desktop/web/h.xbug.io/app/Http/Kernel.php",
+		"/Users/BinHunter/Desktop/web/h.xbug.io/routes/api.php",
+		"/Users/BinHunter/Desktop/web/h.xbug.io/routes/console.php",
+		"/Users/BinHunter/Desktop/web/h.xbug.io/routes/channels.php",
+		"/Users/BinHunter/Desktop/web/h.xbug.io/sftp-config.json",
+		"/Users/BinHunter/Downloads/biu.conf",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/wechatAuth/main.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/functions.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/include/config.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal/wechatAuth/main.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/login.php",
+		"/Users/BinHunter/Desktop/web/portal/天虹Portal/include/main.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/login.html",
+		"/Users/BinHunter/Desktop/web/portal/天虹Portal/wechatAuth/main.php",
+		"/Users/BinHunter/Desktop/web/portal/天虹Portal/wechatAuth/wechatlogin.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/include/main.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/include/functions.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/include/mobile_detect.php",
+		"/Users/BinHunter/Desktop/web/portal/宿舍新portal2/wechatAuth/wechat_config.php",
+		"/Users/BinHunter/Desktop/c/PowerAlpha/include/config.hpp",
+		"/Users/BinHunter/Desktop/phpinstall.sh",
+		"/Users/BinHunter/Desktop/vyos-lnmmp/install.sh",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/divider.html",
+		"/Users/BinHunter/Downloads/error.svg",
+		"/Users/BinHunter/Desktop/c/PowerAlphaTianHong/src/counter.cpp",
+		"/Users/BinHunter/Desktop/c/PowerAlphaTianHong/sftp-config.json",
+		"/Users/BinHunter/Desktop/ip/ip.php",
+		"/Users/BinHunter/Desktop/callback.js",
+		"/Users/BinHunter/Downloads/map 2/static/editor/extensions/ext-divider.js",
+		"/Users/BinHunter/Desktop/说明.txt",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/static/editor/recalculate.js",
+		"/Users/BinHunter/Desktop/map/static/editor/svgcanvas.js",
+		"/Users/BinHunter/Desktop/map/static/editor/extensions/ext-callback.js",
+		"/Users/BinHunter/Desktop/test.svg",
+		"/Users/BinHunter/Desktop/web/6.6.6.7/static/editor/history.js",
+		"/Users/BinHunter/Downloads/dzzoffice1.2.5.2_SC_UTF8/upload/install/include/install_function.php",
+		"/Users/BinHunter/Downloads/dzzoffice1.2.5.2_SC_UTF8/upload/install/index.php",
+		"/Users/BinHunter/Desktop/web/portal/天虹Portal/smsAuth/main.php",
+		"/Users/BinHunter/Desktop/map/static/editor/extensions/ext-divider.js",
+		"/Users/BinHunter/Desktop/untitled.html",
+		"/Users/BinHunter/Desktop/README.md",
+		"/Users/BinHunter/Desktop/license.txt",
+		"/Users/BinHunter/Desktop/web/license/regist.php",
+		"/Users/BinHunter/Desktop/web/license/function.php",
+		"/Users/BinHunter/Desktop/c/lcsGen/src/main.cpp",
+		"/Users/BinHunter/Desktop/web/license/_admin.php",
+		"/Users/BinHunter/Desktop/c/lcsGen/CMakeLists.txt",
+		"/Users/BinHunter/Desktop/c/lcsGen/sftp-config.json"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/BinHunter/Desktop/web/新疆mapeditor/static/editor",
+			"/Users/BinHunter/Desktop/web/新疆mapeditor/static",
+			"/Users/BinHunter/Desktop/c/友好网安/src",
+			"/Users/BinHunter/Desktop/web/6.6.6.7/static/editor/extensions",
+			"/Users/BinHunter/Downloads/dzzoffice1.2.5.2_SC_UTF8/upload",
+			"/Users/BinHunter/Desktop/web/6.6.6.7/static/editor",
+			"/Users/BinHunter/Desktop/c/PowerAlpha/src",
+			"/Users/BinHunter/Downloads/wifidog-gateway-master",
+			"/Users/BinHunter/Desktop/c/wifidog/src",
+			"/Users/BinHunter/Desktop/web/192.168.10.10/demo.fbichina.cc/static/editor",
+			"/Users/BinHunter/Desktop/web/192.168.10.10/demo.fbichina.cc",
+			"/Users/BinHunter/Desktop/web/192.168.10.10/demo.fbichina.cc/Application",
+			"/Users/BinHunter/Desktop/web/192.168.10.10/demo.fbichina.cc",
+			"/Users/BinHunter/Desktop/web/192.168.10.10/demo.fbichina.cc/static/editor",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc/static/editor",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc/Application/Home/Controller",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc/Application",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc/Application",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc/static",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc/static/editor",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc/static/editor/canvg",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc/static/editor",
+			"/Users/CaptainBin/Documents/Workspace/web/192.168.10.10/demo.fbichina.cc/static/index"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"addr",
+			"clientAddress",
+			"sockaddr_in",
+			"sin_addr",
+			"resp",
+			"HTTPServerResponse",
+			"HTTPServerRequest",
+			"MongoDB",
+			"\"\n",
+			"exportImage",
+			"一个形状",
+			"wheel",
+			"iconlist",
+			"gd",
+			"reloadSvg",
+			" L",
+			"merge",
+			"addSvgElementFromJson",
+			"drawImage",
+			"mouseDown",
+			"createText",
+			"cut",
+			"each",
+			"determinPath",
+			"222",
+			" ",
+			" \\n",
+			"L",
+			"VerifyCsrfToken",
+			"Foundation",
+			"not",
+			"createText",
+			"merge",
+			"delPos",
+			"textCheck",
+			"prerectCb",
+			"merge",
+			"split",
+			">CK",
+			"CK",
+			"next",
+			"undo",
+			"#text",
+			"getText",
+			"#text",
+			"merge",
+			"undo",
+			"mouseDown",
+			"mouseUp",
+			"textCheck\\(\\);",
+			"mouseUp",
+			"file_put",
+			"dzz_index",
+			"tpl",
+			"selectedChanged",
+			"lenAdjus",
+			"keepalive",
+			".\n",
+			"auth",
+			"gid",
+			"H2",
+			"UL",
+			"DIV",
+			"$config",
+			"send",
+			"sms/",
+			"../../",
+			"AUTH_VALIDATION",
+			"REQUEST_TYPE_LOGOUT",
+			"httpdGetConnection",
+			"accept",
+			"完成圆、椭圆与矩形的切割功能",
+			"make_geojson_rect",
+			"rect",
+			"circle",
+			"mouseDown",
+			"console",
+			"mouseMove",
+			"multiselect",
+			"mouseMove",
+			"circle",
+			"mouseMove",
+			"selectedChanged",
+			"tools_rect",
+			"rect",
+			"[\"layer\"]=>",
+			"tool_save",
+			"Function",
+			"move",
+			"tool_button",
+			"setMode",
+			"save",
+			"href.replace",
+			"location.reload",
+			"location.replace",
+			"divide",
+			"icon_file",
+			"wSe",
+			"mouseDown",
+			"current_group",
+			".Ok",
+			"text_panel",
+			"leaveContext",
+			"000",
+			"console",
+			"dblclick = ",
+			"dblclick",
+			"url",
+			"image_url",
+			"Change Image",
+			"e di t",
+			"dblclick",
+			"textActions",
+			"dblclick",
+			"pointer-events",
+			"pointer-event:",
+			".layername",
+			"opacity: 0.5",
+			"opacity: 0",
+			"getServer()",
+			"??",
+			"getServer()",
+			"NO_MAP_RELATED",
+			"没有关联地图",
+			"地图服务器管理控制中心",
+			"??",
+			" L ",
+			"font-"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\\nL",
+			"\\n",
+			",",
+			"\\n",
+			"h2",
+			"ul",
+			"div",
+			"$sms_config",
+			"./",
+			"Etone服务器管理控制中心",
+			"",
+			"\"",
+			"fonts/",
+			"font-2.0.0/",
+			"font-4.5.0/",
+			"pointer-events:none",
+			"\\Exception",
+			"/images/",
+			"<label class=\"radio\">",
+			"book",
+			"ibook",
+			"{$1}",
+			"<td align=\"center\">",
+			"Apoint/ck",
+			"ck_",
+			"Sys/admin",
+			"__STATIC__/admin/dist/img",
+			"Activity/act",
+			"Ilist/ilist",
+			"Lostfound/lf",
+			"Market/market",
+			"self::$newtermTitle",
+			"self::$introTitle",
+			"self::$jobTitle",
+			"$this->jobTitle",
+			"Job/job",
+			"Job",
+			"job",
+			"js",
+			"css",
+			"images",
+			"__PUBLIC__/portal",
+			"{:U('Zjxu/editIntro',array('act'=>'edit','id'=>'",
+			"\"__STATIC__"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-checkout":
+	{
+		"height": 118.0
+	},
+	"output.git-commit":
+	{
+		"height": 118.0
+	},
+	"output.git-init":
+	{
+		"height": 124.0
+	},
+	"output.git-pull":
+	{
+		"height": 118.0
+	},
+	"output.git-push":
+	{
+		"height": 118.0
+	},
+	"output.git-remote":
+	{
+		"height": 124.0
+	},
+	"output.sftp":
+	{
+		"height": 127.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "Packages/C++/C++ Single File.sublime-build",
+	"project": "udprok.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"int main(){"
+			],
+			[
+				"main",
+				"int main(){"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
