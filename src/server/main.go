@@ -3,14 +3,44 @@ package server
 import (
 	"flag"
 	"loger"
-	"fmt"
 	"net"
 	"strconv"
+	"time"
+	"errors"
+	"fmt"
 )
 
-type Server struct {
-	
+type CModeClient struct {
+	uuid string
+	addr net.UDPAddr
+	status byte
+	updatetime time.Time
 }
+
+type Packet struct {
+	client_addr net.UDPAddr
+	n int
+	buff []byte
+}
+
+const(
+	REGIST_PACKET = 0x01
+
+)
+
+func handlePackage(packet Packet) {
+	switch packet.buff[0] {
+		case REGIST_PACKET:
+			handleRegistPacket(&packet)
+	}
+}
+
+func handleRegistPacket(packet *Packet) {
+	uuid := string(packet.buff[1:])
+	fmt.Println(uuid)
+}
+
+var conn net.UDPConn
 
 func Main() {
 
@@ -28,10 +58,18 @@ func Main() {
 	conn, err := net.ListenUDP("udp", server_addr)
 	loger.CheckError(err)
 
-	// var buf [20]byte
-	// n, client_addr, _ := conn.ReadFromUDP(buf[0:])
-	// fmt.Println("msg is ", string(buf[0:n]))
-	// fmt.Println("ip:", client_addr.IP)
-	// fmt.Println("port:", client_addr.Port)
-    // _, err = conn.WriteToUDP([]byte("nice to see u"), raddr)
+	var buf [1024]byte
+	for {
+		n, client_addr, err := conn.ReadFromUDP(buf[0:])
+		if err != nil {
+			loger.LogError(err)
+			continue
+		}
+		if n <=0 {
+			loger.LogError(errors.New("read udp error."))
+			continue
+		}
+		go handlePackage(Packet{*client_addr,n,buf[0:n]})
+	}
+
 }
