@@ -6,7 +6,6 @@ import (
 	"net"
 	"strconv"
 	"time"
-	"errors"
 	"fmt"
 )
 
@@ -25,19 +24,34 @@ type Packet struct {
 
 const(
 	REGIST_PACKET = 0x01
-
+	HEARTBEAT_PACKET = 0x02
+	CONNECT_PACKET = 0x03
 )
 
 func handlePackage(packet Packet) {
 	switch packet.buff[0] {
 		case REGIST_PACKET:
-			handleRegistPacket(&packet)
+			packet.regist()
+		case HEARTBEAT_PACKET:
+			packet.heartbeat()
+		case CONNECT_PACKET:
+			packet.connect()
 	}
 }
 
-func handleRegistPacket(packet *Packet) {
+func (packet *Packet)regist() {
 	uuid := string(packet.buff[1:])
-	fmt.Println(uuid)
+	fmt.Println("regist",uuid)
+}
+
+func (packet *Packet)heartbeat() {
+	uuid := string(packet.buff[1:])
+	fmt.Println("heartbeat",uuid)
+}
+
+func (packet *Packet)connect() {
+	uuid := string(packet.buff[1:])
+	fmt.Println("connect",uuid)
 }
 
 var conn net.UDPConn
@@ -66,7 +80,7 @@ func Main() {
 			continue
 		}
 		if n <=0 {
-			loger.LogError(errors.New("read udp error."))
+			loger.LogErrorString(loger.READ_UDP_ERROR)
 			continue
 		}
 		go handlePackage(Packet{*client_addr,n,buf[0:n]})

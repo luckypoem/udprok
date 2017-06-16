@@ -527,7 +527,6 @@
 			"settings":
 			{
 				"buffer_size": 765,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -536,15 +535,6 @@
 			"settings":
 			{
 				"buffer_size": 271,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/log/log.go",
-			"settings":
-			{
-				"buffer_size": 122,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -866,6 +856,7 @@
 	],
 	"file_history":
 	[
+		"/Users/BinHunter/Desktop/golang/udprok/src/log/log.go",
 		"/Users/BinHunter/Desktop/golang/udprok/src/client/main.go",
 		"/Users/BinHunter/Desktop/golang/udprok/src/server/main.go",
 		"/Users/BinHunter/Desktop/golang/udprok/README.md",
@@ -992,8 +983,7 @@
 		"/Users/BinHunter/Downloads/dzzoffice1.2.5.2_SC_UTF8/upload/install/index.php",
 		"/Users/BinHunter/Desktop/web/portal/天虹Portal/smsAuth/main.php",
 		"/Users/BinHunter/Desktop/map/static/editor/extensions/ext-divider.js",
-		"/Users/BinHunter/Desktop/untitled.html",
-		"/Users/BinHunter/Desktop/README.md"
+		"/Users/BinHunter/Desktop/untitled.html"
 	],
 	"find":
 	{
@@ -1242,8 +1232,8 @@
 						"selection":
 						[
 							[
-								92,
-								92
+								500,
+								500
 							]
 						],
 						"settings":
@@ -1255,8 +1245,8 @@
 								{
 									"1":
 									[
-										93,
-										94
+										764,
+										765
 									]
 								},
 								"icon":
@@ -1271,8 +1261,8 @@
 								{
 									"1":
 									[
-										89,
-										90
+										108,
+										109
 									]
 								},
 								"unmatched":
@@ -1474,111 +1464,6 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/log/log.go",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 122,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12,
-								12
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"git_gutter_is_enabled": true,
-							"incomplete_sync": null,
-							"syntax": "Packages/Go/Go.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "src/client/main.go",
 					"semi_transient": false,
 					"settings":
@@ -1695,7 +1580,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
