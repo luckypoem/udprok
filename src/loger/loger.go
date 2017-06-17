@@ -11,7 +11,7 @@ const(
 )
 
 
-func Error(err string) {
+func ErrorString(err string) {
 	fmt.Println(err)
 	os.Exit(1)
 }
