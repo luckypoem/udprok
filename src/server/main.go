@@ -6,7 +6,7 @@ import (
 	"net"
 	"strconv"
 	"time"
-	"fmt"
+	// "fmt"
 )
 
 type SModeClient struct {
@@ -16,76 +16,36 @@ type SModeClient struct {
 	updatetime time.Time
 }
 
-type Packet struct {
-	client_addr *net.UDPAddr
-	n int
-	buff []byte
-}
-
-const(
-	REGIST_PACKET = 0x01
-	HEARTBEAT_PACKET = 0x02
-	CONNECT_PACKET = 0x03
-)
-
-func handlePackage(packet *Packet) {
-	switch packet.buff[0] {
-		case REGIST_PACKET:
-			packet.regist()
-		case HEARTBEAT_PACKET:
-			packet.heartbeat()
-		case CONNECT_PACKET:
-			packet.connect()
-	}
-}
-
-func (packet *Packet)regist() {
-	uuid := string(packet.buff[1:])
-	smodeclients[uuid] = SModeClient{
-		uuid,
-		packet.client_addr,
-		0,
-		time.Now()
-	}
-	fmt.Println("regist",uuid)
-}
-
-func (packet *Packet)heartbeat() {
-	uuid := string(packet.buff[1:])
-	fmt.Println("heartbeat",uuid)
-}
-
-func (packet *Packet)connect() {
-	uuid := string(packet.buff[1:])
-	fmt.Println("connect",uuid)
-}
-
 func clean() {
 
 }
 
 var conn *net.UDPConn
-var smodeclients map[*SModeClient]string
+var smodeclients map[string]*SModeClient = make(map[string]*SModeClient)
 
 func Main() {
 
+	// get config
 	port := flag.Int("p", 7450, "The port to listen UDP")
 	addr := flag.String("l", "0.0.0.0", "The address to listen UDP")
 	flag.Parse()
 
+	// check config
 	if *port < 1 || *port > 65535 {
 		loger.ErrorString(loger.PORT_NOT_IN_RANGE)
 	}
 
 	server_addr, err := net.ResolveUDPAddr("udp", *addr + ":" + strconv.Itoa(*port))
 	loger.CheckError(err)
-
-	smodeclients = make(map[*SModeClient]string)
+	
 	_conn, err := net.ListenUDP("udp", server_addr)
 	loger.CheckError(err)
 	conn = _conn
 
+	// start a thread to timely clean up timeout clients
 	go clean()
+
+	// loop to get data
 	for {
 		var buf [1024]byte
 		n, client_addr, err := conn.ReadFromUDP(buf[0:])
