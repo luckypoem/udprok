@@ -8,25 +8,15 @@ import (
 	"strconv"
 	"github.com/bitly/go-simplejson"
     "io/ioutil"
-    "bytes"
-    "server"
-)
-
-const(
-	REGISTED_PACKET = 0x01
-	CONNECT_PACKET = 0x02
-	HEARTBEAT_PACKET = 0x03
+    "packet"
 )
 
 var conn *net.UDPConn
 var uuid string
 
 func regist() error {
-	var b bytes.Buffer
-	b.WriteByte(server.REGIST_PACKET)
-	b.WriteString(uuid)
-	conn.Write(b.Bytes())
-
+	packet := packet.NewRegistPacket(uuid)
+	conn.Write(packet.Bytes())
 	return nil
 }
 func recieve() {

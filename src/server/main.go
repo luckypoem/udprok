@@ -6,7 +6,8 @@ import (
 	"net"
 	"strconv"
 	"time"
-	// "fmt"
+	"packet"
+	"fmt"
 )
 
 type SModeClient struct {
@@ -57,7 +58,11 @@ func Main() {
 			loger.LogErrorString(loger.READ_UDP_ERROR)
 			continue
 		}
-		go handlePackage(&Packet{client_addr,n,buf[0:n]})
+		go handlePackage(packet.NewPacket(client_addr, buf[0:n]))
 	}
 
+}
+
+func handlePackage(packet *packet.Packet) {
+	fmt.Println(packet.Type())
 }

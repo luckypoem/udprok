@@ -1,6 +1,6 @@
 {
 	"mode": "server",
-	"host":	"qcloud.zjxu.org",
+	"host":	"127.0.0.1",
 	"port": 7450,
 	"uuid": "admin"
 }
