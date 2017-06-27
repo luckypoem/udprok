@@ -7,15 +7,21 @@ import (
 	"strconv"
 	"time"
 	"packet"
+	"sync"
+	"bytes"
 	"fmt"
 )
 
 type SModeClient struct {
-	uuid string
-	addr *net.UDPAddr
-	status byte
-	updatetime time.Time
+	UUID string
+	Addr *net.UDPAddr
+	Status byte
+	UpdateTime time.Time
 }
+
+const(
+	STATUS_NORMAL = 0x00
+)
 
 func clean() {
 
@@ -23,6 +29,7 @@ func clean() {
 
 var conn *net.UDPConn
 var smodeclients map[string]*SModeClient = make(map[string]*SModeClient)
+var mapmutex sync.Mutex
 
 func Main() {
 
@@ -58,11 +65,52 @@ func Main() {
 			loger.LogErrorString(loger.READ_UDP_ERROR)
 			continue
 		}
+		if n >= 1024 {
+			n = 1023
+		}
 		go handlePackage(packet.NewPacket(client_addr, buf[0:n]))
 	}
 
 }
 
-func handlePackage(packet *packet.Packet) {
-	fmt.Println(packet.Type())
+func handlePackage(p *packet.Packet) {
+	switch p.Type() {
+		case packet.REGIST_PACKET:
+			registServer(p)
+	}
+}
+
+func sendPackage(p packet.BytesPacket, addr *net.UDPAddr) (int, error){
+	n, err := conn.WriteToUDP(p.Bytes(), addr)
+	if err != nil {
+		loger.LogError(err)
+	}
+	return n,err
+}
+
+func registServer(p *packet.Packet) {
+	uuid := p.RegistPacket().UUID
+
+	mapmutex.Lock()
+	client, ok := smodeclients[uuid]
+	//check if the uuid has been registed
+	if ok {
+		if !bytes.Equal(client.Addr.IP, p.Addr.IP) && client.Addr.Port != p.Addr.Port {
+			fmt.Println(client.Addr, p.Addr)
+			mapmutex.Unlock()
+			errorPacket := packet.NewErrorPacket(loger.UUID_USED)
+			sendPackage(errorPacket, p.Addr)
+		}else{
+			client.UpdateTime = time.Now()
+			mapmutex.Unlock()
+			okPacket := packet.NewOkPacket()
+			sendPackage(okPacket, p.Addr)
+		}
+	}else{
+		client = &SModeClient{uuid, p.Addr, STATUS_NORMAL, time.Now()}
+		smodeclients[uuid] = client
+		mapmutex.Unlock()
+		okPacket := packet.NewOkPacket()
+		sendPackage(okPacket, p.Addr)
+	}
 }

@@ -5,15 +5,19 @@ import (
 )
 
 type Packet struct {
-	addr *net.UDPAddr
+	Addr *net.UDPAddr
 	buff []byte
+}
+
+type BytesPacket interface {
+	Bytes() []byte
 }
 
 const(
 	REGIST_PACKET = 0x01
-	UUIDUSED_PACKET = 0x02
-	REGISTED_PACKET = 0x03
-	CONNECT_PACKET = 0x04
+	CONNECT_PACKET = 0x02
+	ERROR_PACKET = 0x03
+	OK_PACKET = 0x04
 )
 
 func NewPacket(addr *net.UDPAddr, data []byte) *Packet {

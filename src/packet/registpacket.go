@@ -5,16 +5,17 @@ import (
 )
 
 type RegistPacket struct {
-	uuid string
+	UUID string
 }
 
 func NewRegistPacket(uuid string) *RegistPacket {
 	return &RegistPacket{uuid}
 }
+
 func (packet *RegistPacket)Bytes() []byte {
 	var b bytes.Buffer
 	b.WriteByte(REGIST_PACKET)
-	b.WriteString(packet.uuid)
+	b.WriteString(packet.UUID)
 	return b.Bytes()
 }
 

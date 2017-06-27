@@ -8,6 +8,7 @@ import (
 const(
 	PORT_NOT_IN_RANGE = "端口超出范围（1-65535）"
 	READ_UDP_ERROR = "获取UDP数据出错"
+	UUID_USED = "UUID已被占用"
 )
 
 

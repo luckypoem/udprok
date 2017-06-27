@@ -3,32 +3,13 @@ package client
 import (
 	"net"
 	"loger"
-	// "fmt"
 	"flag"
 	"strconv"
 	"github.com/bitly/go-simplejson"
     "io/ioutil"
-    "packet"
+    "smode"
+    "cmode"
 )
-
-var conn *net.UDPConn
-var uuid string
-
-func regist() error {
-	packet := packet.NewRegistPacket(uuid)
-	conn.Write(packet.Bytes())
-	return nil
-}
-func recieve() {
-	for {
-		var buff [1024]byte
-		n, _, err := conn.ReadFromUDP(buff[0:])
-		if err != nil || n <= 0 {
-			continue
-		}
-
-	}
-}
 
 func Main() {
 
@@ -44,7 +25,7 @@ func Main() {
 	mode := conf_json.Get("mode").MustString()
 	host := conf_json.Get("host").MustString()
 	port := conf_json.Get("port").MustInt()
-	uuid = conf_json.Get("uuid").MustString()
+	uuid := conf_json.Get("uuid").MustString()
 
 	if port < 1 || port > 65535 {
 		loger.ErrorString(loger.PORT_NOT_IN_RANGE)
@@ -53,11 +34,12 @@ func Main() {
 	server_addr, err := net.ResolveUDPAddr("udp", host + ":" + strconv.Itoa(port))
 	loger.CheckError(err)
 
-	_conn, err := net.DialUDP("udp", nil, server_addr)
+	conn, err := net.DialUDP("udp", nil, server_addr)
 	loger.CheckError(err)
-	conn = _conn
 
 	if mode == "server" {
-		regist()
+		smode.Main(uuid, conn)
+	}else{
+		cmode.Main(uuid, conn)
 	}
 }
