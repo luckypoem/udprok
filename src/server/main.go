@@ -9,7 +9,6 @@ import (
 	"packet"
 	"sync"
 	"bytes"
-	"fmt"
 )
 
 type SModeClient struct {
@@ -24,7 +23,19 @@ const(
 )
 
 func clean() {
-
+	//clean the registed smode clients which had been timeout.
+	ticker := time.NewTicker( time.Second * 10 )
+	for {
+		<-ticker.C
+		now := time.Now()
+		mapmutex.Lock()
+		for uuid ,client := range smodeclients{
+			if now.Sub(client.UpdateTime).Seconds() > 60 {
+				delete(smodeclients, uuid)
+			}
+	    }
+	    mapmutex.Unlock()
+	}
 }
 
 var conn *net.UDPConn
@@ -77,6 +88,8 @@ func handlePackage(p *packet.Packet) {
 	switch p.Type() {
 		case packet.REGIST_PACKET:
 			registServer(p)
+		case packet.HEARTBEAT_PACKET:
+			handleHeartbeat(p)
 	}
 }
 
@@ -90,13 +103,11 @@ func sendPackage(p packet.BytesPacket, addr *net.UDPAddr) (int, error){
 
 func registServer(p *packet.Packet) {
 	uuid := p.RegistPacket().UUID
-
 	mapmutex.Lock()
 	client, ok := smodeclients[uuid]
 	//check if the uuid has been registed
 	if ok {
-		if !bytes.Equal(client.Addr.IP, p.Addr.IP) && client.Addr.Port != p.Addr.Port {
-			fmt.Println(client.Addr, p.Addr)
+		if !bytes.Equal(client.Addr.IP, p.Addr.IP) || client.Addr.Port != p.Addr.Port {
 			mapmutex.Unlock()
 			errorPacket := packet.NewErrorPacket(loger.UUID_USED)
 			sendPackage(errorPacket, p.Addr)
@@ -112,5 +123,21 @@ func registServer(p *packet.Packet) {
 		mapmutex.Unlock()
 		okPacket := packet.NewOkPacket()
 		sendPackage(okPacket, p.Addr)
+	}
+}
+
+func handleHeartbeat(p *packet.Packet) {
+	heartbeatPacket := p.HeartBeatPacket()
+	uuid := heartbeatPacket.UUID
+	mapmutex.Lock()
+	client, ok := smodeclients[uuid]
+	if ok {
+		client.UpdateTime = time.Now()
+		mapmutex.Unlock()
+		sendPackage(packet.NewOkPacket(), p.Addr)
+	}else{
+		mapmutex.Unlock()
+		errorPacket := packet.NewErrorPacket(loger.UUID_UNREGISTED)
+		sendPackage(errorPacket, p.Addr)
 	}
 }

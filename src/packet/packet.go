@@ -16,8 +16,9 @@ type BytesPacket interface {
 const(
 	REGIST_PACKET = 0x01
 	CONNECT_PACKET = 0x02
-	ERROR_PACKET = 0x03
-	OK_PACKET = 0x04
+	HEARTBEAT_PACKET = 0x03
+	ERROR_PACKET = 0x04
+	OK_PACKET = 0x05
 )
 
 func NewPacket(addr *net.UDPAddr, data []byte) *Packet {

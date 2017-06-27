@@ -4,11 +4,15 @@ import (
 	"bytes"
 )
 
+var _okPkg *OkPacket = nil
 type OkPacket struct {
 }
 
 func NewOkPacket() *OkPacket {
-	return &OkPacket{}
+	if _okPkg == nil {
+		_okPkg = &OkPacket{}
+	}
+	return _okPkg
 }
 
 func (packet *OkPacket)Bytes() []byte {
