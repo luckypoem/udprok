@@ -14,5 +14,5 @@ all: client server
 clean:
 	go clean -i -r ./
 
-simplejson:
+simplejson: 
 	go get github.com/bitly/go-simplejson
