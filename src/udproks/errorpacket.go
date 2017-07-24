@@ -1,4 +1,4 @@
-package smode
+package udproks
 
 import (
 	"packet"

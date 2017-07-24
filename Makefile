@@ -1,15 +1,18 @@
-.PHONY: default server client clean all
+.PHONY: default udprokd udproks udprokc clean all
 export GOPATH:=$(shell pwd)
 
 default: all
 
-server:
+all: udprokd udproks udprokc
+
+udprokd:
 	go install main/udprokd
 
-client: simplejson
-	go install main/udprok
+udproks: simplejson
+	go install main/udproks
 
-all: client server
+udprokc: simplejson
+	go install main/udprokc
 
 clean:
 	go clean -i -r ./

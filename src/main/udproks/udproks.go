@@ -1,9 +1,9 @@
 package main
 
 import (
-	"client"
+	"udproks"
 )
 
 func main() {
-	client.Main()
+	udproks.Main()
 }

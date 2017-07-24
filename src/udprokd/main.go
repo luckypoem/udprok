@@ -1,4 +1,4 @@
-package server
+package udprokd
 
 import (
 	"flag"
@@ -11,36 +11,15 @@ import (
 	"bytes"
 )
 
-type SModeClient struct {
+type Udproks struct {
 	UUID string
 	Addr *net.UDPAddr
-	Status byte
 	UpdateTime time.Time
 }
 
-const(
-	STATUS_NORMAL = 0x00
-)
-
-func clean() {
-	//clean the registed smode clients which had been timeout.
-	ticker := time.NewTicker( time.Second * 10 )
-	for {
-		<-ticker.C
-		now := time.Now()
-		mapmutex.Lock()
-		for uuid ,client := range smodeclients{
-			if now.Sub(client.UpdateTime).Seconds() > 60 {
-				delete(smodeclients, uuid)
-			}
-	    }
-	    mapmutex.Unlock()
-	}
-}
-
 var conn *net.UDPConn
-var smodeclients map[string]*SModeClient = make(map[string]*SModeClient)
-var mapmutex sync.Mutex
+var udproksMap map[string]*Udproks = make(map[string]*Udproks)
+var mapmutex sync.RWMutex
 
 func Main() {
 
@@ -77,7 +56,7 @@ func Main() {
 			continue
 		}
 		if n >= 1024 {
-			n = 1023
+			n = 1024
 		}
 		go handlePackage(packet.NewPacket(client_addr, buf[0:n]))
 	}
@@ -103,8 +82,10 @@ func sendPackage(p packet.BytesPacket, addr *net.UDPAddr) (int, error){
 
 func registServer(p *packet.Packet) {
 	uuid := p.RegistPacket().UUID
+
 	mapmutex.Lock()
-	client, ok := smodeclients[uuid]
+	client, ok := udproksMap[uuid]
+
 	//check if the uuid has been registed
 	if ok {
 		if !bytes.Equal(client.Addr.IP, p.Addr.IP) || client.Addr.Port != p.Addr.Port {
@@ -118,8 +99,8 @@ func registServer(p *packet.Packet) {
 			sendPackage(okPacket, p.Addr)
 		}
 	}else{
-		client = &SModeClient{uuid, p.Addr, STATUS_NORMAL, time.Now()}
-		smodeclients[uuid] = client
+		client = &Udproks{uuid, p.Addr, time.Now()}
+		udproksMap[uuid] = client
 		mapmutex.Unlock()
 		okPacket := packet.NewOkPacket()
 		sendPackage(okPacket, p.Addr)
@@ -129,15 +110,31 @@ func registServer(p *packet.Packet) {
 func handleHeartbeat(p *packet.Packet) {
 	heartbeatPacket := p.HeartBeatPacket()
 	uuid := heartbeatPacket.UUID
-	mapmutex.Lock()
-	client, ok := smodeclients[uuid]
+	mapmutex.RLock()
+	client, ok := udproksMap[uuid]
 	if ok {
 		client.UpdateTime = time.Now()
-		mapmutex.Unlock()
+		mapmutex.RUnlock()
 		sendPackage(packet.NewOkPacket(), p.Addr)
 	}else{
-		mapmutex.Unlock()
+		mapmutex.RUnlock()
 		errorPacket := packet.NewErrorPacket(loger.UUID_UNREGISTED)
 		sendPackage(errorPacket, p.Addr)
+	}
+}
+
+func clean() {
+	//clean the registed smode clients which had been timeout.
+	ticker := time.NewTicker( time.Second * 10 )
+	for {
+		<-ticker.C
+		now := time.Now()
+		mapmutex.Lock()
+		for uuid ,client := range udproksMap{
+			if now.Sub(client.UpdateTime).Seconds() > 60 {
+				delete(udproksMap, uuid)
+			}
+	    }
+	    mapmutex.Unlock()
 	}
 }

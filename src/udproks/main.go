@@ -1,10 +1,14 @@
-package smode
+package udproks
 
-import (
-	"net"
-	"packet"
+import(
+	"flag"
 	"loger"
+	"net"
+	"strconv"
+	"packet"
 	"time"
+	"io/ioutil"
+	"github.com/bitly/go-simplejson"
 )
 
 const(
@@ -17,10 +21,34 @@ var status byte
 var conn *net.UDPConn
 var respTime time.Time
 
-func Main(uuid string, _conn *net.UDPConn) {
+func Main(){
+
+	configPath := flag.String("c", "udproks.json", "Config file path")
+	flag.Parse()
+
+	configData, err := ioutil.ReadFile(*configPath)
+	loger.CheckError(err)
+
+	configJson, err := simplejson.NewJson(configData)
+	loger.CheckError(err)
+
+	host := configJson.Get("host").MustString()
+	port := configJson.Get("port").MustInt()
+	uuid := configJson.Get("uuid").MustString()
+
+	if port < 1 || port > 65535 {
+		loger.ErrorString(loger.PORT_NOT_IN_RANGE)
+	}
+
+	serverAddr, err := net.ResolveUDPAddr("udp", host + ":" + strconv.Itoa(port))
+	loger.CheckError(err)
+
+	_conn, err := net.DialUDP("udp", nil, serverAddr)
+	loger.CheckError(err)
+
+	conn = _conn
 
 	status = STATUS_UNREGISTED
-	conn = _conn
 
 	go regist(uuid)
 
@@ -38,21 +66,24 @@ func Main(uuid string, _conn *net.UDPConn) {
 		}
 		go handlePackage(packet.NewPacket(client_addr, buf[0:n]))
 	}
+
 }
 
 func regist(uuid string) {
+
+	registPacket := packet.NewRegistPacket(uuid)
+	heartbeatPacket := packet.NewHeartBeatPacket(uuid)
+
 	for {
 		for status = STATUS_REGISTING;status != STATUS_REGISTED; {
 			//regist to server
 			loger.Info("Registing")
-			registPacket := packet.NewRegistPacket(uuid)
 			SendPacket(registPacket)
 			time.Sleep(3 * time.Second)
 		}
 		loger.Info("Registed")
 		//heartbeat
 		ticker := time.NewTicker( time.Second * 10 )
-		heartbeatPacket := packet.NewHeartBeatPacket(uuid)
 		for status == STATUS_REGISTED {
 			<-ticker.C
 			SendPacket(heartbeatPacket)
@@ -62,29 +93,4 @@ func regist(uuid string) {
 			}
 		}
 	}
-}
-
-func handlePackage(p *packet.Packet) {
-	switch p.Type() {
-		case packet.OK_PACKET:
-			handleOkPacket(p)
-		case packet.ERROR_PACKET:
-			handleErrorPacket(p)
-	}
-}
-
-func SendPacket(p packet.BytesPacket) (int, error) {
-	n, err := conn.Write(p.Bytes());
-	if err != nil {
-		loger.LogError(err)
-	}
-	return n, err
-}
-
-func SendPacketToUDP(p packet.BytesPacket, addr *net.UDPAddr) (int, error) {
-	n, err := conn.WriteToUDP(p.Bytes(), addr);
-	if err != nil {
-		loger.LogError(err)
-	}
-	return n, err
 }

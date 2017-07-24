@@ -1,9 +1,9 @@
 package main
 
 import (
-	"udprokd"
+	"udprokc"
 )
 
 func main() {
-	udprokd.Main()
+	udprokc.Main()
 }
